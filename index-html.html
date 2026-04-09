@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para Mi Bonita ❤️</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+    font-family:'Segoe UI',sans-serif;
+    background: linear-gradient(135deg,#ff9a9e,#fecfef);
+    color:white;
+    overflow-x:hidden;
+}
+
+/* PANTALLA INICIAL */
+#intro{
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:black;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:1000;
+    flex-direction:column;
+}
+
+#intro button{
+    padding:20px 40px;
+    font-size:20px;
+    border:none;
+    border-radius:50px;
+    background:#ff4d6d;
+    color:white;
+    cursor:pointer;
+}
+
+/* HERO */
+.hero{
+    height:20vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:3rem;
+    animation:latido 2s infinite;
+}
+
+@keyframes latido{
+    0%,100%{transform:scale(1);}
+    50%{transform:scale(1.1);}
+}
+
+.section{
+    padding:20px 20px;
+    text-align:center;
+}
+
+/* CARTA */
+.carta{
+    background:white;
+    color:black;
+    padding:20px;
+    border-radius:15px;
+    max-width:400px;
+    margin:10px auto;
+}
+
+/* GALERIA */
+.gallery img{
+    width:150px;
+    border-radius:15px;
+    margin:10px;
+}
+
+/* CORAZONES */
+.heart{
+    position:fixed;
+    bottom:0;
+    animation:subir 5s linear infinite;
+}
+@keyframes subir{
+    100%{transform:translateY(-100vh);}
+}
+</style>
+
+</head>
+<body>
+
+<!-- INTRO -->
+<div id="intro">
+    <h2 style="color:white;margin-bottom:20px;">Tengo algo para ti ❤️</h2>
+    <button onclick="entrar()">Haz clic aquí</button>
+</div>
+
+<!-- CONTENIDO -->
+<div id="contenido" style="display:none;">
+
+<div class="hero">
+    <h1>Para Mi Hermosa Mia❤️</h1>
+    <p id="contador"></p>
+</div>
+
+<div class="section">
+    <h2>Nuestra historia 💕</h2>
+    <p>
+        Todo comenzo cuando en aquella tarde de aquel mes de julio
+        yo revisando como siempre Facebook, me aparecio en el muro principal 
+        las fotos que habia posteado para que alguien viera de todo lo que se habia perdido JAJAJAJAJAJ
+        Pero el que en realidad miro esas fotos fue el gran kevin umaña, aquel que penso nunca mas volver a tener algo especial
+        con alguien... Me arme de valor para enviarte mensaje🙈, eso primeramente viendo si ya no estaba con julanito, entonces
+        mire que ya no y dije ahora si va a ser para mi, paso la tarde envie el mensaje y no fue respondido el mismo dia🥹, hasta que el dia 09 de julio
+        el mensaje fue respondido y me alegre porque sabia que algo iba a comenzar a formarse, estaba teniendo fe de que si se iba a poder y las conversaciones
+        fueron fluyendo poco a poco y Nuestra intencion que al principio no fue que mas para hablar como amigos🤗, luego se convirtio en un coqueteo que yo 
+        no lo tiraba asi pero usted dijo que si, entonces como a las mujeres nadie les gana no tuve mas remedio que aceptar que si te estaba coqueteando🙈💝,
+        que hasta combos le ofreci a la dama para ver cual queria jajajajajajja me acepto uno pero ese incluia salir y dijo que ese no podia, hasta que luego
+        se llego el domingo en el que pude salir con esta bella dama, asustado y todo iba porque aunque le habia mirado nunca le habia hablado, mis nervios iban como que,
+        hasta que pum llegue a mitad de donde vivia y cuando la mire aun mas se me alborotaron los nervios🙈 pensando en que le iba a decir de entrada, y solo se me ocurrio, 
+        ahora se porque te dicen la inalcanzable jajajajajaj, con eso rompi hielo, y ahora hasta el dia de hoy me encuentro con usted luego de 8 meses que parecieran que inicie con usted ayer
+        Teniendo los mismos sentimientos y el mismo amor desde la primera vez que la llegue a recoger para salir,💖 y como ultimas palabras, estoy mas que feliz con uste amore mio, 
+        me consta que mi felicidad estando con usted es inigualable, siempre te necesito y ahnelo mi vida siempre a su lado.  Te amoooooooooooo mucho Bonita 💖😻
+    </p>
+</div>
+
+<div class="section">
+    <h2>Lo que siento por ti 💌</h2>
+    <p id="texto"></p>
+</div>
+
+<div class="section">
+    <h2>Mensaje especial ❤️</h2>
+    <div class="carta">
+        Te amo muchísimo Mi Bonita, estar con usted es una super bendicion, porque das alegria y amor a quien necesitaba algo de eso 💖  
+        Gracias por existir y por estar conmigo sos mi persona favorita ✨
+    </div>
+</div>
+
+<div class="section">
+    <h2>Nuestros recuerdos 📸</h2>
+    <div class="gallery">
+        <img src="img/Foto5.webp">
+        <img src="img/Foto2.jpeg">
+        <img src="img/Foto3.jpeg">
+        <img src="img/Foto4.jpeg">
+        <img src="img/Foto1.jpeg">
+        <img src="img/Foto6.jpeg">
+        <img src="img/Foto8.jpeg">
+        <img src="img/Foto7.jpeg">
+        <img src="img/Foto9.jpeg">
+        <img src="img/Foto10.jpeg">
+    </div>
+</div>
+
+</div>
+
+<audio id="audio" loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+// ENTRAR
+function entrar(){
+    document.getElementById("intro").style.display="none";
+    document.getElementById("contenido").style.display="block";
+    document.getElementById("audio").play();
+}
+
+// CONTADOR
+const inicio = new Date("2025-08-05");
+setInterval(()=>{
+    let diff = new Date()-inicio;
+    let dias = Math.floor(diff/(1000*60*60*24));
+    document.getElementById("contador").innerText = dias+" días juntos ❤️";
+},1000);
+
+// TEXTO ANIMADO
+const mensaje = "El mayor deseo de amor, del cual siento y quiero con usted, es llegar a un altar y verme con usted por el resto de mi vida, Hasta el fuego mi amor 🔥💖";
+let i=0;
+function escribir(){
+    if(i<mensaje.length){
+        document.getElementById("texto").innerHTML += mensaje.charAt(i);
+        i++;
+        setTimeout(escribir,50);
+    }
+}
+escribir();
+
+// CORAZONES
+setInterval(()=>{
+    let h=document.createElement("div");
+    h.className="heart";
+    h.innerHTML="❤️";
+    h.style.left=Math.random()*100+"vw";
+    document.body.appendChild(h);
+    setTimeout(()=>h.remove(),5000);
+},300);
+</script>
+
+</body>
+</html>
